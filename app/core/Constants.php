@@ -1,3 +1,5 @@
+<!-- Konstanta pada project ini -->
+
 <?php
 
 

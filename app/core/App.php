@@ -1,5 +1,7 @@
 <?php
 
+// Core Komponen dari proses MVC 
+
 class App
 {
     protected $controller = 'Home';
