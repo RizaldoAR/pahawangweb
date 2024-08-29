@@ -22,6 +22,12 @@
                     <td><?= $orderList['nama_package']; ?></td>
                     <td><?= $orderList['harga_package']; ?></td>
                     <td><?= $orderList['total_harga']; ?></td>
+                    <td>
+                        <div class="container">
+                            <a href="<?= BASEURL; ?>/order/detail/<?= $orderList['no']; ?>" type="button" class="btn btn-primary">Update</a>
+                            <a type="button" class="btn btn-danger">Delete</a>
+                        </div>
+                    </td>
 
                 </tr>
             </tbody>

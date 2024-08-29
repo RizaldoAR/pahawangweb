@@ -17,6 +17,25 @@ class Order extends Controller
         $this->view('orderForm/index');
         $this->view('templates/footer');
     }
+
+
+    public function detail($id)
+    {
+        $data['judul'] = 'Order Detail';
+        $data['home'] = '';
+        $data['order'] = 'active';
+        $data['list'] = '';
+
+
+        $data['orderList'] = $this->model('List_model')->getOrderById($id);
+
+
+        $this->view('templates/header', $data);
+        $this->view('orderDetail/index', $data);
+        $this->view('templates/footer');
+    }
+
+
     public function list()
     {
         // Data untuk Header dan Navbar
