@@ -1,4 +1,5 @@
 <div class="container mt-5 shadow-lg">
+    <?php Flasher::flash() ?>
     <table class="table">
         <thead>
             <tr>

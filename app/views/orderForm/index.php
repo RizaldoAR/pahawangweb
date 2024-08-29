@@ -1,4 +1,7 @@
 <div class="container mt-3 p-5 shadow-lg">
+
+
+    <?php Flasher::flash() ?>
     <h2>Form Pemesanan</h2>
     <form id="bookingForm" method="post" action="<?= BASEURL; ?>/order/tambah">
         <div class="mb-3 mt-3">

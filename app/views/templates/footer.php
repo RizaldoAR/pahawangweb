@@ -2,6 +2,7 @@
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="http://localhost/pahawangweb/public/js/bootstrap.bundle.js"></script>
+  <script src="http://localhost/pahawangweb/public/js/script.js"></script>
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--

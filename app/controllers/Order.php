@@ -58,6 +58,39 @@ class Order extends Controller
     public function tambah()
     {
         if ($this->model('List_model')->tambahDataOrder($_POST) > 0) {
+            Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+            header('Location: ' . BASEURL . '/order');
+            exit;
+        } else {
+            Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+            header('Location: ' . BASEURL . '/order');
+            exit;
+        }
+    }
+
+    public function delete($id)
+    {
+        if ($this->model('List_model')->deleteDataOrder($id) > 0) {
+            Flasher::setFlash('berhasil', 'terhapus', 'success');
+            header('Location: ' . BASEURL . '/order/list');
+            exit;
+        } else {
+            Flasher::setFlash('gagal', 'terhapus', 'danger');
+            header('Location: ' . BASEURL . '/order/list');
+            exit;
+        }
+    }
+
+    public function edit()
+    {
+
+
+        if ($this->model('List_model')->editDataOrder($_POST) > 0) {
+            Flasher::setFlash('berhasil', 'teredit', 'success');
+            header('Location: ' . BASEURL . '/order');
+            exit;
+        } else {
+            Flasher::setFlash('gagal', 'teredit', 'danger');
             header('Location: ' . BASEURL . '/order');
             exit;
         }
