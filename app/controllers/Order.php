@@ -54,4 +54,12 @@ class Order extends Controller
         $this->view('orderList/index', $data);
         $this->view('templates/footer');
     }
+
+    public function tambah()
+    {
+        if ($this->model('List_model')->tambahDataOrder($_POST) > 0) {
+            header('Location: ' . BASEURL . '/order');
+            exit;
+        }
+    }
 }
